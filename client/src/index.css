@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #F84565;
+  --color-primary-dull: #D63854;
+}
+/* :root {
+  --color-primary: #F84565;
+  --color-primary-dull: #D63854;
+}
+
+html.dark {
+  --color-primary: #9A1C3B;
+  --color-primary-dull: #7B182E;
+} */
+
+
+*{
+  font-family: "Outfit", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #787777 #1e1e1e;
+}
+
+body{
+  color: white;
+  background-color: #09090B;
+}
+
+.no-scrollbar{
+  scrollbar-width: none;
+}
+
+/* to disable up down icon */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+/* for calender icon to show */
+/* To make the calendar icon visible in dark mode, especially if it’s default black on a dark background. */
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
