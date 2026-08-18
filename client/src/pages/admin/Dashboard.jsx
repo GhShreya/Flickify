@@ -5,7 +5,6 @@ import Loading from "../../components/Loading";
 import Title from "./Title";
 import BlurCircle from "../../components/BlurCircle";
 import { dateFormat } from "../../lib/dateFormat";
-import { getDashboardData } from "../../../../server/controllers/adminController";
 import { useAppContext } from "../../context/AppContext";
 
 const Dashboard = () => {
