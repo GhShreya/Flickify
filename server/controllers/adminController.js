@@ -26,7 +26,7 @@ export const getDashboardData = async (req, res) => {
 
         res.json({success: true, dashboardData})
     }catch (error){
-        console.log(error);
+        console.error(error);
         res.json({success: false, message: error.message})
     }
 }
@@ -45,7 +45,7 @@ export const getAllShows = async(req, res) => {
 // API to get all bookings
 export const getAllBookings = async (req, res) => {
     try{
-        const bookings = (await Booking.find({}).populate('user')).populate({
+        const bookings = await Booking.find({}).populate('user').populate({
             path: "show",
             populate: {path: "movie"}
         }).sort({createdAt: -1})
