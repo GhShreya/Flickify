@@ -1,4 +1,6 @@
 import mongoose, { mongo } from "mongoose";
+import User from "./User.js";
+import Show from "./Show.js";
 
 const bookingSchema = new mongoose.Schema({
     user: {

@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-import { type } from "os";
+import Movie from "./Movie.js";
+//import { type } from "os";
 
 const showSchema = new mongoose.Schema({
     movie: {

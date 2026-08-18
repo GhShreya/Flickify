@@ -5,6 +5,7 @@ import Title from './Title';
 import { CheckIcon, DeleteIcon, StarIcon } from 'lucide-react';
 import { kConverter } from '../../lib/kConverter';
 import { useAppContext } from '../../context/AppContext';
+import toast from 'react-hot-toast'
 
 const AddShows = () => {
 
@@ -59,16 +60,16 @@ const AddShows = () => {
                 [date]: filteredTimes,
             };
         });
-    }
+    };
 
     const handleSubmit = async () => {
         try{
-            setAddingShow(true);
+            setAddingShow(true)
 
-            if(!selectedMovie || Object.keys(dateTimeSelection).lenght === 0 || !showPrice){
+            if(!selectedMovie || Object.keys(dateTimeSelection).length === 0 || !showPrice){
                 return toast('Missing required fields');
             }
-            const showsInput = Object.entries(dateTimeSelection).map(([data, time]) => ({date, time}));
+            const showsInput = Object.entries(dateTimeSelection).map(([date, time]) => ({date, time}));
 
             const payload = {
                 movieId: selectedMovie,
@@ -85,7 +86,7 @@ const AddShows = () => {
                 setShowPrice("")
             }else{
                 toast.error(data.message)
-            }
+            } 
         } catch(error) {
             console.error("Submission error:", error);
             toast.error("An error occurred, please try again!")

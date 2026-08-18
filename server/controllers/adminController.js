@@ -1,6 +1,7 @@
 import User from "../models/User.js"
 import Booking from "../models/Booking.js"
 import Show from "../models/Show.js";
+import Movie from "../models/Movie.js";
 import { populate } from "dotenv";
 
 //API to check if user if admin
